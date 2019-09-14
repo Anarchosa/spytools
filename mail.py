@@ -1,15 +1,20 @@
-#!/usr/bin/env python
+#! /usr/bin/env python
+# -*- coding: UTF-8 -*-
 
 import smtplib
+import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+os.system("apt-get install figlet")
+os.system("clear")
+os.system("figlet OTOMAIL")
 
-me = input("mail adresiniz:")
-you = input("kullanıcı maillerinin listesini girin (sadec gmail):")
-passwd=input("mail sifrenizi girin:")
-mesaj=input("gondereceginiz mailin icerigi (html syntaxi ile yazılmıs metin dosyası) :")
-baslik=input("email konusunu girin")
+me = input("Mail Adresiniz: ")
+you = input("Kullanıcı maillerinin listesini girin (sadec gmail): ")
+passwd=input("Mail sifrenizi girin:")
+mesaj=input("Gondereceginiz mailin icerigi (html syntaxi ile yazılmıs metin dosyası) : ")
+baslik=input("Email Konusunu Girin: ")
 
 file=open(you,"r")
 file=file.read()
